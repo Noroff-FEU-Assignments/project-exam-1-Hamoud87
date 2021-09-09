@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <script src="https://kit.fontawesome.com/3ffc009c99.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
+      <a href="index.html"><img src="../images/logo.png" class="logo" alt="a logo of save me" /></a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -18,8 +20,46 @@
         </ul>
       </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section class="carousel-container">
+        <i class="fas fa-chevron-left carousel-button prev" id="prev"></i>
+        <i class="fas fa-chevron-right carousel-button next"></i>
+        <div class="carousel"></div>
+      </section>
+      <section>
+        <div class="latest-posts-container"></div>
+      </section>
+    </main>
+    <footer>
+      <section class="footer-wrapper">
+        <div>
+          <a href="index.html"><img src="../images/logo.png" class="footer-logo" alt="a logo of save me" /></a>
+        </div>
+
+        <div>
+          <p>Newslatter</p>
+          <form method="POST">
+            <input type="text" name="email" id="email" placeholder="Enter email address here" class="sign-up" />
+            <a href="#" type="submit" class="cta-sign-up">SIGN UP</a>
+          </form>
+          <div class="nav-footer">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="privacy.html">Terms of service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="social-media">
+          <i class="fab fa-2x fa-instagram"></i>
+          <i class="fab fa-2x fa-facebook-f"></i>
+          <i class="fab fa-2x fa-youtube"></i>
+        </div>
+      </section>
+      <p class="copy-right">2021 © Save Me</p>
+    </footer>
+
     <script src="js/script.js"></script>
   </body>
 </html>
