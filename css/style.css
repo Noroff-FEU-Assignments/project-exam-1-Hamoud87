@@ -100,9 +100,7 @@ nav ul li a:hover {
   max-width: 500px;
   justify-self: center;
 }
-.latest-post-img {
-  max-width: 300px;
-}
+
 /* Posts by Countries */
 .countries-container {
   max-width: 1200px;

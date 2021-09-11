@@ -70,7 +70,7 @@ function createLatestHTML(latest) {
   latest.forEach(function (latestPost) {
     latestContainer.innerHTML += ` <div class="latest-post">
                                      <a href="detail.html?id=${latestPost.id}">              
-                                     <img class="latest-post-img" src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
+                                     <img src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
                                      
                                      </a>
                                    </div>`;
