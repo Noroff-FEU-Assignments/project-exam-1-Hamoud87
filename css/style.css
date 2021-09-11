@@ -19,13 +19,14 @@ header {
   position: absolute;
   top: 5px;
   left: 30px;
-  max-width: 50px;
+  max-width: 70px;
   margin: 0px 30px;
   background-color: #b5d3cd;
   border-radius: 50%;
   padding: 7px;
 }
-.logo:hover {
+.logo:hover,
+.footer-logo:hover {
   background-color: #fc7353;
 }
 nav {
@@ -60,6 +61,7 @@ nav ul li a:hover {
   display: flex;
   transform: translateX(0);
   transition: transform 0.25s;
+  transition: 1s;
 }
 .slider-images {
   width: 33%;
@@ -86,6 +88,34 @@ nav ul li a:hover {
   right: 10px;
   top: 150px;
   z-index: 1;
+}
+
+/* latest posts */
+
+.latest-posts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.latest-post {
+  max-width: 500px;
+  justify-self: center;
+}
+
+/* Posts by Countries */
+.countries-container {
+  max-width: 1200px;
+  display: flex;
+  margin: 10px auto;
+}
+.countries-post {
+  max-width: 15%;
+  padding: 0px 10px;
+  border-radius: 30px;
+}
+.countries-animal-img {
+  max-width: 100%;
+  border-radius: 30px;
+  border: 2px solid #fc7353;
 }
 footer {
   background-color: #2c3e50;

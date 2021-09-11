@@ -6,7 +6,7 @@ async function getPost() {
     const response = await fetch(url);
     const getResults = await response.json();
     createHTML(getResults);
-    createLatestHTML(getResults);
+
     console.log(getResults);
   } catch (error) {
     console.log(error);
@@ -50,7 +50,7 @@ navButtons.forEach((button) => {
 });
 
 // Latest Posts
-const urlLatest = "http://balawi.one/wp-json/wp/v2/posts?categories=1";
+const urlLatest = "http://balawi.one/wp-json/wp/v2/posts?categories=28";
 const latestContainer = document.querySelector(".latest-posts-container");
 async function getLatestPost() {
   try {
@@ -66,10 +66,38 @@ async function getLatestPost() {
 getLatestPost();
 
 function createLatestHTML(latest) {
+  latestContainer.innerHTML = "";
   latest.forEach(function (latestPost) {
-    latestContainer.innerHTML += ` <div class="slider-images">
+    latestContainer.innerHTML += ` <div class="latest-post">
                                      <a href="detail.html?id=${latestPost.id}">              
-                                     <img class="animal-img" src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
+                                     <img  src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
+                                     
+                                     </a>
+                                   </div>`;
+  });
+}
+
+// Posts by country
+const urlCountries = "http://balawi.one/wp-json/wp/v2/posts";
+const countriesContainer = document.querySelector(".countries-container");
+async function getCountriesPost() {
+  try {
+    const countriesResponse = await fetch(urlCountries);
+    const getCountriesResults = await countriesResponse.json();
+    createCountriestHTML(getCountriesResults);
+    console.log(getCountriesResults);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getCountriesPost();
+function createCountriestHTML(countries) {
+  countriesContainer.innerHTML = "";
+  countries.forEach(function (countriesPost) {
+    countriesContainer.innerHTML += ` <div class="countries-post">
+                                     <a href="detail.html?id=${countriesPost.id}">              
+                                     <img class="countries-animal-img" src="${countriesPost.featured_media_src_url}" alt="${countriesPost.yoast_head_json.og_image[0].alt}">
                                      </a>
                                    </div>`;
   });
