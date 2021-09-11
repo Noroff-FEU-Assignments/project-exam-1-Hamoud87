@@ -78,7 +78,7 @@ function createLatestHTML(latest) {
 }
 
 // Posts by country
-/* const urlCountries = "http://balawi.one/wp-json/wp/v2/posts";
+const urlCountries = "http://balawi.one/wp-json/wp/v2/posts";
 const countriesContainer = document.querySelector(".countries-container");
 async function getCountriesPost() {
   try {
@@ -102,4 +102,3 @@ function createCountriestHTML(countries) {
                                    </div>`;
   });
 }
-*/
