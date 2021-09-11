@@ -50,7 +50,7 @@ navButtons.forEach((button) => {
 });
 
 // Latest Posts
-/* const urlLatest = "http://balawi.one/wp-json/wp/v2/posts?categories=28";
+const urlLatest = "http://balawi.one/wp-json/wp/v2/posts?categories=28";
 const latestContainer = document.querySelector(".latest-posts-container");
 async function getLatestPost() {
   try {
@@ -101,4 +101,4 @@ function createCountriestHTML(countries) {
                                      </a>
                                    </div>`;
   });
-}*/
+}
