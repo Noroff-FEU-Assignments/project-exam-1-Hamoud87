@@ -89,18 +89,30 @@ nav ul li a:hover {
   top: 150px;
   z-index: 1;
 }
-
+h1 {
+  text-align: center;
+}
 /* latest posts */
-
+.section-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
 .latest-posts-container {
+  max-width: 1280px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-gap: 20px;
 }
 .latest-post {
-  max-width: 500px;
+  max-width: 700px;
   justify-self: center;
 }
-
+.latest-post p {
+  max-width: 600px;
+  margin: 0px auto;
+  color: #2c3e50;
+}
 /* Posts by Countries */
 .countries-container {
   max-width: 1200px;

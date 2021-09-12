@@ -1,4 +1,4 @@
-const url = "http://balawi.one/wp-json/wp/v2/posts";
+const url = "https://balawi.one/wp-json/wp/v2/posts";
 const carousel = document.querySelector(".carousel");
 
 async function getPost() {
@@ -50,7 +50,7 @@ navButtons.forEach((button) => {
 });
 
 // Latest Posts
-const urlLatest = "http://balawi.one/wp-json/wp/v2/posts?categories=28";
+const urlLatest = "https://balawi.one/wp-json/wp/v2/posts?categories=28";
 const latestContainer = document.querySelector(".latest-posts-container");
 async function getLatestPost() {
   try {
@@ -70,7 +70,8 @@ function createLatestHTML(latest) {
   latest.forEach(function (latestPost) {
     latestContainer.innerHTML += ` <div class="latest-post">
                                      <a href="detail.html?id=${latestPost.id}">              
-                                     <img src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
+                                     <img class="animal-img" src="${latestPost.yoast_head_json.og_image[0].path}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
+                                     <p>${latestPost.yoast_head_json.og_description}</p>
                                      
                                      </a>
                                    </div>`;
@@ -78,7 +79,7 @@ function createLatestHTML(latest) {
 }
 
 // Posts by country
-/* const urlCountries = "http://balawi.one/wp-json/wp/v2/posts";
+const urlCountries = "https://balawi.one/wp-json/wp/v2/posts";
 const countriesContainer = document.querySelector(".countries-container");
 async function getCountriesPost() {
   try {
@@ -102,4 +103,3 @@ function createCountriestHTML(countries) {
                                    </div>`;
   });
 }
-*/
