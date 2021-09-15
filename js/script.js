@@ -40,7 +40,7 @@ navButtons.forEach((button) => {
         translateX += 100;
       }
     } else {
-      if (index !== 2) {
+      if (index !== 3) {
         index++;
         translateX -= 100;
       }
@@ -68,12 +68,41 @@ getLatestPost();
 function createLatestHTML(latest) {
   latestContainer.innerHTML = "";
   latest.forEach(function (latestPost) {
-    latestContainer.innerHTML += ` <div class="latest-post">           
-                                     <img class="animal-img" src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
+    latestContainer.innerHTML += ` <div class="latest-post pyramid">           
+                                     <img src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
                                      <h2>${latestPost.title.rendered}</h2>
                                      <p>${latestPost.yoast_head_json.description}</p>
                                      <a href="detail.html?id=${latestPost.id}">Learn More
                                      </a>
+                                   </div>`;
+  });
+}
+// Single Post
+const urlSingle = "https://balawi.one/wp-json/wp/v2/posts?categories=29";
+const singleContainer = document.querySelector(".single-post-container");
+async function singlePost() {
+  try {
+    const singleResponse = await fetch(urlSingle);
+    const singleResults = await singleResponse.json();
+    singlePostHTML(singleResults);
+    console.log(singleResults);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+singlePost();
+
+function singlePostHTML(single) {
+  singleContainer.innerHTML = "";
+  single.forEach(function (singlePost) {
+    singleContainer.innerHTML += ` <div class="single-post">           
+                                     <img class="animal-img" src="${singlePost.featured_media_src_url}" alt="${singlePost.yoast_head_json.og_image[0].alt}">
+                                     <div class="single-post-text">
+                                     <h2>${singlePost.title.rendered}</h2>
+                                     <p>${singlePost.excerpt.rendered}</p>
+                                     <a href="detail.html?id=${singlePost.id}">Learn More</a>
+                                     </div>
                                    </div>`;
   });
 }

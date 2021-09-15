@@ -65,6 +65,8 @@ h2 {
   font-family: "lato";
   font-size: 21px;
 }
+/* Carousel */
+
 .carousel-container {
   max-width: 1280px;
   overflow: hidden;
@@ -93,7 +95,7 @@ h2 {
 .carousel-button {
   position: absolute;
   font-size: 50px;
-  color: #fc7353;
+  color: white;
 }
 .prev {
   left: 20px;
@@ -112,25 +114,25 @@ h1 {
 .section-wrapper {
   display: flex;
   justify-content: center;
-  margin: 0px auto;
-  background-color: rgba(181, 211, 205, 0.6);
-
   padding-bottom: 20px;
+  background-color: #b5d3cd;
 }
 .latest-posts-container {
-  max-width: 1280px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  grid-gap: 20px;
+  max-width: 100%;
+  display: flex;
+  column-gap: 20px;
 }
 .latest-post {
-  max-width: 650px;
+  max-width: 620px;
   justify-self: center;
+  padding: 0px 0px 15px;
 }
-
+.latest-post img {
+  max-width: 95%;
+}
 .latest-post p,
 .latest-post h2 {
-  max-width: 610px;
+  max-width: 600px;
   margin: 10px auto;
   color: #2c3e50;
 }
@@ -138,10 +140,44 @@ h1 {
 .latest-post a {
   color: #fc7353;
   border: #fc7353 2px solid;
-  border-radius: 30px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 5px 10px;
   margin: 10px 0px 0px 10px;
   font-family: "futura";
+}
+/* Qoutes */
+.qoutes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #2c3e50;
+  padding: 50px 0px;
+}
+/* Single Post */
+.single-post-section {
+  background-color: #fc7353;
+}
+.single-post-container {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+.single-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px 0px 0px;
+}
+.single-post-text {
+  max-width: 430px;
+  background-color: #f2f2f2;
+  position: relative;
+  right: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 150px;
+}
+.single-post-text p {
+  color: #2c3e50;
 }
 /* Posts by Countries */
 .countries-container {
@@ -176,6 +212,7 @@ footer {
 .footer-logo {
   position: static;
 }
+
 footer ul {
   display: flex;
 }
@@ -197,25 +234,16 @@ i {
   border: 2px solid#fc7353;
   border-radius: 30px;
   padding: 10px 40px;
-  margin: 0px;
   color: #b5d3cd;
 }
 .cta-sign-up {
   background: #b5d3cd;
   color: #2c3e50;
-  padding: 9px;
+  padding: 12px;
   border: none;
   position: relative;
-  right: 40px;
 }
 .copy-right {
   text-align: center;
-  padding: 70px 0px;
-}
-.test {
-  border-radius: 30px;
-  border: salmon 3px solid;
-}
-.bear-two-image {
-  max-width: 50px;
+  padding: 100px 0px 0px;
 }
