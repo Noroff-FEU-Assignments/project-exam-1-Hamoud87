@@ -68,11 +68,11 @@ getLatestPost();
 function createLatestHTML(latest) {
   latestContainer.innerHTML = "";
   latest.forEach(function (latestPost) {
-    latestContainer.innerHTML += ` <div class="latest-post">
-                                     <a href="detail.html?id=${latestPost.id}">              
-                                     <img class="animal-img" src="${latestPost.yoast_head_json.og_image[0].path}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
-                                     <p>${latestPost.yoast_head_json.og_description}</p>
-                                     
+    latestContainer.innerHTML += ` <div class="latest-post">           
+                                     <img class="animal-img" src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
+                                     <h2>${latestPost.title.rendered}</h2>
+                                     <p>${latestPost.yoast_head_json.description}</p>
+                                     <a href="detail.html?id=${latestPost.id}">Learn More
                                      </a>
                                    </div>`;
   });
@@ -103,3 +103,27 @@ function createCountriestHTML(countries) {
                                    </div>`;
   });
 }
+
+/* const urlLatest = "https://balawi.one/wp-json/wp/v2/posts?categories=28";
+const latestContainer = document.querySelector(".latest-posts-container");
+
+async function getLatestPost() {
+  try {
+    const latestResponse = await fetch(urlLatest);
+    const getLatestResults = await latestResponse.json();
+    console.log(getLatestResults);
+    latestContainer.innerHTML = "";
+    for (let i = 0; i < getLatestResults.length; i++) {
+      latestContainer.innerHTML += ` <div class="latest-post">
+<img  src="${getLatestResults[i].featured_media_src_url}" alt="">
+                                    
+    <p>${getLatestResults[i].yoast_head_json.og_description}</p>
+    
+  
+  </div>`;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+getLatestPost(); */

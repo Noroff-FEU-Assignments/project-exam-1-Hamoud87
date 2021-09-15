@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "Futura-Round";
-  src: url(../Futura-Round-Font/Futura\ Round\ Bold.ttf);
+  src: url(../Futura-Round-Font/Futura\ Round\ Light.ttf);
 }
 body {
   margin: 0%;
@@ -19,11 +19,11 @@ header {
   position: absolute;
   top: 5px;
   left: 30px;
-  max-width: 70px;
+  max-width: 65px;
   margin: 0px 30px;
   background-color: #b5d3cd;
   border-radius: 50%;
-  padding: 7px;
+  padding: 3px;
 }
 .logo:hover,
 .footer-logo:hover {
@@ -42,13 +42,29 @@ nav ul a {
   font-size: 20px;
   font-family: "Lato";
   font-weight: 600;
-  color: #2c3e50;
 }
 
 nav ul li a:hover {
   color: #fc7353;
 }
-
+h1,
+h2,
+p,
+nav ul a {
+  color: #2c3e50;
+}
+p {
+  font-family: "futura";
+  font-weight: 100;
+  font-size: 17px;
+  line-height: 25px;
+}
+nav ul a,
+h1,
+h2 {
+  font-family: "lato";
+  font-size: 21px;
+}
 .carousel-container {
   max-width: 1280px;
   overflow: hidden;
@@ -97,6 +113,9 @@ h1 {
   display: flex;
   justify-content: center;
   margin: 0px auto;
+  background-color: rgba(181, 211, 205, 0.6);
+
+  padding-bottom: 20px;
 }
 .latest-posts-container {
   max-width: 1280px;
@@ -105,13 +124,24 @@ h1 {
   grid-gap: 20px;
 }
 .latest-post {
-  max-width: 700px;
+  max-width: 650px;
   justify-self: center;
 }
-.latest-post p {
-  max-width: 600px;
-  margin: 0px auto;
+
+.latest-post p,
+.latest-post h2 {
+  max-width: 610px;
+  margin: 10px auto;
   color: #2c3e50;
+}
+
+.latest-post a {
+  color: #fc7353;
+  border: #fc7353 2px solid;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 10px 0px 0px 10px;
+  font-family: "futura";
 }
 /* Posts by Countries */
 .countries-container {
@@ -173,7 +203,7 @@ i {
 .cta-sign-up {
   background: #b5d3cd;
   color: #2c3e50;
-  padding: 13px;
+  padding: 9px;
   border: none;
   position: relative;
   right: 40px;
@@ -181,4 +211,11 @@ i {
 .copy-right {
   text-align: center;
   padding: 70px 0px;
+}
+.test {
+  border-radius: 30px;
+  border: salmon 3px solid;
+}
+.bear-two-image {
+  max-width: 50px;
 }
