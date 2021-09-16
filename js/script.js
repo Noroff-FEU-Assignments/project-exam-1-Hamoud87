@@ -97,7 +97,7 @@ function singlePostHTML(single) {
   singleContainer.innerHTML = "";
   single.forEach(function (singlePost) {
     singleContainer.innerHTML += ` <div class="single-post">           
-                                     <img class="animal-img" src="${singlePost.featured_media_src_url}" alt="${singlePost.yoast_head_json.og_image[0].alt}">
+                                     <img class="single-posta-img" src="${singlePost.featured_media_src_url}" alt="${singlePost.yoast_head_json.og_image[0].alt}">
                                      <div class="single-post-text">
                                      <h2>${singlePost.title.rendered}</h2>
                                      <p>${singlePost.excerpt.rendered}</p>
