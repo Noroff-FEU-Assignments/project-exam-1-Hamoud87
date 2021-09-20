@@ -50,7 +50,7 @@ navButtons.forEach((button) => {
 });
 
 // Latest Posts
-const urlLatest = "https://balawi.one/wp-json/wp/v2/posts?categories=28";
+/* const urlLatest = "https://balawi.one/wp-json/wp/v2/posts?categories=28";
 const latestContainer = document.querySelector(".latest-posts-container");
 async function getLatestPost() {
   try {
@@ -68,7 +68,7 @@ getLatestPost();
 function createLatestHTML(latest) {
   latestContainer.innerHTML = "";
   latest.forEach(function (latestPost) {
-    latestContainer.innerHTML += ` <div class="latest-post pyramid">           
+    latestContainer.innerHTML += ` <div class="latest-post">           
                                      <img src="${latestPost.featured_media_src_url}" alt="${latestPost.yoast_head_json.og_image[0].alt}">
                                      <h2>${latestPost.title.rendered}</h2>
                                      <p>${latestPost.yoast_head_json.description}</p>
@@ -76,7 +76,7 @@ function createLatestHTML(latest) {
                                      </a>
                                    </div>`;
   });
-}
+} */
 // Single Post
 const urlSingle = "https://balawi.one/wp-json/wp/v2/posts?categories=29";
 const singleContainer = document.querySelector(".single-post-container");
@@ -133,7 +133,7 @@ function createCountriestHTML(countries) {
   });
 }
 
-/* const urlLatest = "https://balawi.one/wp-json/wp/v2/posts?categories=28";
+const urlLatest = "https://balawi.one/wp-json/wp/v2/posts?categories=28";
 const latestContainer = document.querySelector(".latest-posts-container");
 
 async function getLatestPost() {
@@ -143,16 +143,25 @@ async function getLatestPost() {
     console.log(getLatestResults);
     latestContainer.innerHTML = "";
     for (let i = 0; i < getLatestResults.length; i++) {
-      latestContainer.innerHTML += ` <div class="latest-post">
-<img  src="${getLatestResults[i].featured_media_src_url}" alt="">
-                                    
-    <p>${getLatestResults[i].yoast_head_json.og_description}</p>
-    
-  
+      let className = "";
+      if (i % 1 === 0) {
+        className = "first-post";
+      }
+      if (i % 3 === 1) {
+        className = "second-post";
+      }
+
+      latestContainer.innerHTML += ` <div class="latest-post ${className} ">
+
+      <img  class="" src="${getLatestResults[i].featured_media_src_url}" alt="">
+      <h2>${getLatestResults[i].title.rendered}</h2>
+      <p>${getLatestResults[i].yoast_head_json.description}</p>
+      <a href="detail.html?id=${getLatestResults[i].id}">Learn More
+      </a>
   </div>`;
     }
   } catch (error) {
     console.log(error);
   }
 }
-getLatestPost(); */
+getLatestPost();
