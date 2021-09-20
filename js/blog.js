@@ -7,7 +7,7 @@ async function getBlogPosts() {
     const blogResponse = await fetch(blogUrl);
     const getBlogResults = await blogResponse.json();
     console.log(getBlogResults);
-    blogContainer.innerHTML = "";
+
     for (let i = 0; i < getBlogResults.length; i++) {
       blogContainer.innerHTML += ` <div class="blog-posts-wrapper" >
                                    <a href="detail.html?id=${getBlogResults[i].id}">
@@ -26,6 +26,7 @@ getBlogPosts();
 let numberToOffset = 2;
 
 button.onclick = function () {
+  numberToOffset += 2;
   const viewMoreUrl = `https://balawi.one/wp-json/wp/v2/posts?per_page=2&offset=${numberToOffset}`;
 
   async function viewMorePosts() {
