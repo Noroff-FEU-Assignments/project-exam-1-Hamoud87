@@ -7,7 +7,7 @@ async function getBlogPosts() {
     const blogResponse = await fetch(blogUrl);
     const getBlogResults = await blogResponse.json();
     console.log(getBlogResults);
-    blogContainer.innerHTML += "";
+    blogContainer.innerHTML = "";
     for (let i = 0; i < getBlogResults.length; i++) {
       blogContainer.innerHTML += ` <div class="blog-posts-wrapper" >
                                    <a href="detail.html?id=${getBlogResults[i].id}">
