@@ -1,7 +1,5 @@
 const detailsContainer = document.querySelector(".single-post-container");
-const modal = document.querySelector(".modal");
-const views = document.querySelectorAll(".animal-img");
-const fullImage = document.querySelector(".full-image");
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const postID = params.get("id");
@@ -15,6 +13,16 @@ async function fetchProduct() {
     const details = await response.json();
     console.log(details);
     createHtml(details);
+    const viewImage = document.querySelector(".animal-img");
+    const closeImage = document.querySelector(".close-image");
+    const detailsDiv = document.querySelector(".details-container");
+    viewImage.onclick = function () {
+      event.stopPropagation();
+      detailsDiv.classList.add("view");
+    };
+    closeImage.onclick = function () {
+      detailsDiv.classList.remove("view");
+    };
   } catch (error) {
     console.log(error);
   }
@@ -23,24 +31,22 @@ fetchProduct();
 
 function createHtml(details) {
   detailsContainer.innerHTML = `
-                                  <div class="details-container">
+                                  <div class="details-container ">
                                   <h1>${details.title.rendered}</h1>
                                  
-                                  <img class="animal-img"  data-fullimage="${details.featured_media_src_url}" src="${details.featured_media_src_url}" alt="">  
+                                  <img class="animal-img"  src="${details.featured_media_src_url}" alt="">  
                                   <p> ${details.content.rendered}</p>
                                   <p>Author ${details.yoast_head_json.twitter_creator}</P>
                                   <p>Published ${details.date}</P>
 
                                  </div>
-                                 <div class="modal">
-                                 <img src="" alt="" class="full-image" />
-                                 
-                                 </div>
-                                
                                  `;
 }
-views.forEach((view) => {
-  view.addEventListner("click", () => {
-    modal.classList.add("open");
-  });
-});
+
+/* postImage.addEventListner("click", testA);
+
+function testA() {
+  postImage.classList.add(".view");
+  postImage.classList.remove(".details-container");
+  console.log("hi");
+}*/

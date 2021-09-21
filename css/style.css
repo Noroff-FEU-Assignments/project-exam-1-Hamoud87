@@ -316,20 +316,24 @@ footer li a:hover,
   max-width: 1200px;
 }
 .details-container {
-  max-width: 70%;
+  max-width: 60%;
   margin: 0px auto;
+  transition: 0.6s;
 }
 .details-container p {
-  letter-spacing: 1px;
+  opacity: 0.9;
   line-height: 2.5em;
-  word-spacing: 0.04em;
+  word-spacing: 0.05em;
   max-width: 95%;
   margin: 0px auto;
 }
 .blocks-gallery-item figure img {
   max-width: 100%;
 }
-.modal {
+.view {
+  max-width: 100%;
+}
+/* .modal {
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   width: 100%;
@@ -352,4 +356,4 @@ footer li a:hover,
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   pointer-events: all;
-}
+}*/

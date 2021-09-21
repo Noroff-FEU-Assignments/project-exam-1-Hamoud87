@@ -1,4 +1,4 @@
-const blogUrl = "https://balawi.one/wp-json/wp/v2/posts?per_page=5";
+const blogUrl = "https://balawi.one/wp-json/wp/v2/posts?per_page=10";
 
 const blogContainer = document.querySelector(".blog-container");
 const button = document.querySelector("#button");
@@ -26,7 +26,7 @@ getBlogPosts();
 let numberToOffset = 2;
 
 button.onclick = function () {
-  numberToOffset += 2;
+  numberToOffset += 8;
   const viewMoreUrl = `https://balawi.one/wp-json/wp/v2/posts?per_page=2&offset=${numberToOffset}`;
 
   async function viewMorePosts() {
