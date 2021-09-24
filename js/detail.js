@@ -31,16 +31,14 @@ fetchProduct();
 
 function createHtml(details) {
   detailsContainer.innerHTML = `
-                                  <div class="details-container ">
-                                  <h1>${details.title.rendered}</h1>
-                                 
-                                  <img class="animal-img"  src="${details.featured_media_src_url}" alt="">  
-                                  <p> ${details.content.rendered}</p>
-                                  <p>Author ${details.yoast_head_json.twitter_creator}</P>
-                                  <p>Published ${details.date}</P>
-
-                                 </div>
-                                 `;
+                                  <div class="details-container">
+                                     <h1>${details.title.rendered}</h1>
+                                     <img class="animal-img" src="${details.featured_media_src_url}" alt="${details.yoast_head_json.og_image[0].alt}"> 
+                                     <p> ${details.content.rendered}</p>
+                                     <p>Published ${details.date.slice(0, 10)}</P>
+                                     <a href=contact.html? class="button take-action">TAkE ACTION</a>
+                                  </div>
+                                  `;
 }
 
 /* postImage.addEventListner("click", testA);
@@ -50,3 +48,4 @@ function testA() {
   postImage.classList.remove(".details-container");
   console.log("hi");
 }*/
+/* <p>Author ${details.yoast_head_json.twitter_creator}</P> */

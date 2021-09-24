@@ -10,6 +10,10 @@
   </head>
   <body>
     <header>
+      <a href="index.html"><img src="../images/logo.png" class="logo" alt="a logo of save me" /></a>
+      <label class="hamburger-label" for="hamburger-menu"> <i class="fas fa-3x fa-hamburger"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
+      <label class="close" for="close-menu"><i class="fas fa-3x fa-times-circle"></i></label>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -19,7 +23,35 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section>
+        <div class="contact-elements">
+          <h1>Contact Us</h1>
+          <p>If would like to adopt or donate contact us call or send us email or leave a message on our form. Thanks your for your kindness !</p>
+          <p>Phone: +4747184444</p>
+          <p>Email: saveme@outlook.com</p>
+        </div>
+      </section>
+      <section>
+        <form action="POST" class="form contact-form" id="contactform">
+          <div class="validation-error" id="success">Thank you for submitting !</div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+          <div class="validation-error" id="nameerror">Name (Should be more than 5 characters long)</div>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+          <div class="validation-error" id="emailerror">Email address (Must be a valid email address)</div>
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject" />
+          <div class="validation-error" id="subjecterror">Subject (Should be more than 15 characters long)</div>
+          <label for="message">Message</label>
+          <textarea name="text" id="message" cols="30" rows="15"></textarea>
+          <div class="validation-error" id="messageerror">Message content (Should be more than 25 characters long)</div>
+
+          <button type="submit" class="button">SUBMIT</button>
+        </form>
+      </section>
+    </main>
     <footer>
       <section class="footer-wrapper">
         <div>
@@ -35,8 +67,8 @@
             <ul>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="privacy.html">Privacy policy</a></li>
-              <li><a href="privacy.html">Terms of service</a></li>
+              <li><a href="terms-privacy.html">Privacy policy</a></li>
+              <li><a href="terms-privacy.html">Terms of service</a></li>
             </ul>
           </div>
         </div>
@@ -51,5 +83,6 @@
       <p class="copy-right">2021 © Save Me</p>
     </footer>
     <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const url = "https://balawi.one/wp-json/wp/v2/posts";
+const url = "https://balawi.one/wp-json/wp/v2/posts?per_page=12";
 const carousel = document.querySelector(".carousel");
 
 async function getPost() {
@@ -18,7 +18,7 @@ function createHTML(posts) {
   posts.forEach(function (post) {
     carousel.innerHTML += ` <div class="slider-images">
                             <a href="detail.html?id=${post.id}">              
-                            <img class="animal-img" src="${post.featured_media_src_url}" alt="${post.yoast_head_json.og_image[0].alt}">
+                            <img class="animal-img onhover-animal-img" src="${post.featured_media_src_url}" alt="${post.yoast_head_json.og_image[0].alt}">
                             </a>
                             </div>`;
   });
@@ -27,7 +27,7 @@ function createHTML(posts) {
 const navButtons = document.querySelectorAll(".carousel-button");
 const imagesNumber = document.querySelectorAll(".slider-images").length;
 
-let index = 1;
+let index = 0;
 let translateX = 0;
 
 // Carousel
@@ -37,17 +37,32 @@ navButtons.forEach((button) => {
     if (event.target.id === "prev") {
       if (index !== 0) {
         index--;
-        translateX += 100;
+        translateX += 102;
       }
     } else {
-      if (index !== 4) {
+      if (index !== 3) {
         index++;
-        translateX -= 100;
+        translateX -= 102;
       }
     }
     carousel.style.transform = `translateX(${translateX}%)`;
   });
 });
+/* Nav open/close button */
+const closeButton = document.querySelector(".close");
+const openButton = document.querySelector(".fa-hamburger");
+const nav = document.querySelector("nav");
+closeButton.onclick = function () {
+  event.stopPropagation();
+  nav.style.display = "none";
+  closeButton.style.display = "none";
+};
+openButton.onclick = function () {
+  event.stopPropagation();
+  nav.style.display = "block";
+  closeButton.style.display = "block";
+};
+
 // Recent Events
 
 const urlLatest = "https://balawi.one/wp-json/wp/v2/posts?categories=28";
@@ -60,22 +75,12 @@ async function getLatestPost() {
     console.log(getLatestResults);
     latestContainer.innerHTML = "";
     for (let i = 0; i < getLatestResults.length; i++) {
-      let className = "";
-      if (i % 1 === 0) {
-        className = "first-post";
-      }
-      if (i % 3 === 1) {
-        className = "second-post";
-      }
-
-      latestContainer.innerHTML += ` <div class="latest-post ${className} ">
-
-      <img  class="" src="${getLatestResults[i].featured_media_src_url}" alt="">
-      <h2>${getLatestResults[i].title.rendered}</h2>
-      <p>${getLatestResults[i].yoast_head_json.description}</p>
-      <a href="detail.html?id=${getLatestResults[i].id}">Learn More
-      </a>
-  </div>`;
+      latestContainer.innerHTML += ` <div class="latest-post">
+                                       <img src="${getLatestResults[i].featured_media_src_url}" alt="${getLatestResults[i].yoast_head_json.og_image[0].alt}">
+                                       <h2>${getLatestResults[i].title.rendered}</h2>
+                                       <p>${getLatestResults[i].yoast_head_json.description}</p>
+                                       <a href="detail.html?id=${getLatestResults[i].id}">Learn More</a>
+                                      </div>`;
     }
   } catch (error) {
     console.log(error);
@@ -96,7 +101,6 @@ async function singlePost() {
     console.log(error);
   }
 }
-
 singlePost();
 
 function singlePostHTML(single) {
@@ -114,7 +118,7 @@ function singlePostHTML(single) {
 }
 
 // Posts by country
-const urlCountries = "https://balawi.one/wp-json/wp/v2/posts";
+const urlCountries = "https://balawi.one/wp-json/wp/v2/posts?per_page=12";
 const countriesContainer = document.querySelector(".countries-container");
 async function getCountriesPost() {
   try {
