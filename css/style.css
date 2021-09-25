@@ -51,6 +51,10 @@ nav ul li a:hover,
 .active {
   color: #fc7353;
 }
+
+.active-background {
+  background-color: #2c3e50;
+}
 h1,
 h2,
 p {
@@ -67,6 +71,7 @@ h2,
   font-family: "lato";
   font-size: 19px;
 }
+
 /* Carousel */
 
 .carousel-container {
@@ -336,6 +341,7 @@ footer li a:hover,
 .single-post-container {
   max-width: 1280px;
 }
+
 .details-container {
   max-width: 60%;
   margin: 0px auto;
@@ -347,7 +353,8 @@ footer li a:hover,
 }
 .details-container p,
 .saboxplugin-gravatar,
-.saboxplugin-authorname {
+.saboxplugin-authorname,
+.terms-policy {
   max-width: 720px;
   line-height: 2em;
   word-spacing: 0.03em;
@@ -399,6 +406,8 @@ footer li a:hover,
   right: 5px;
   bottom: 10px;
 }
+/* Terms-Privacy page */
+
 /* Contact Page */
 
 .contact-elements {
@@ -449,6 +458,7 @@ footer li a:hover,
     opacity: 1;
   }
 }
+
 /* Ipad size */
 @media (max-width: 768px) {
   header {
