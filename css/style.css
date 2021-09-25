@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Futura Round";
+  src: url(../Futura-Round-Font/Futura\ Round.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../Futura-Round-Font/Lato-Bold.ttf);
+}
+
 body {
   margin: 0%;
   padding: 0%;
