@@ -471,7 +471,7 @@ footer li a:hover,
     display: none;
   }
   .close {
-    position: absolute;
+    position: fixed;
     right: 60px;
     top: 15px;
     z-index: 2000;
@@ -479,7 +479,7 @@ footer li a:hover,
   nav {
     display: none;
     position: fixed;
-    top: -20px;
+    top: -30px;
     right: 0px;
     background-color: #2c3e50;
     z-index: 1000;
@@ -524,6 +524,10 @@ footer li a:hover,
 /* Mobile */
 @media (max-width: 600px) {
   /* Home Page */
+  .slider-images {
+    width: 100%;
+  }
+
   .latest-posts-container {
     display: block;
   }
