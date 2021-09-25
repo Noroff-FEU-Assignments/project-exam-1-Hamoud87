@@ -79,7 +79,7 @@ h2,
   margin: 10px auto;
   display: flex;
   transform: translateX(0);
-  transition: transform 0.25s;
+
   transition: 1s;
 }
 .slider-images {
@@ -261,7 +261,8 @@ footer ul li {
 footer li a,
 a,
 i,
-footer p {
+footer p,
+footer form label {
   text-decoration: none;
   color: #b5d3cd;
   font-family: "futura Round";
@@ -281,6 +282,7 @@ footer p {
   background: #b5d3cd;
   color: #2c3e50;
   padding: 10px;
+
   border: none;
   position: relative;
 }
@@ -298,7 +300,7 @@ footer li a:hover,
 /* Blog Page */
 .blog-container {
   display: grid;
-  grid-template-columns: repeat(2, 40%);
+  grid-template-columns: repeat(2, 45%);
   justify-content: center;
   column-gap: 30px;
   margin: 20px 0px;
@@ -358,10 +360,12 @@ footer li a:hover,
 .view {
   max-width: 100%;
 }
-
+.wp-block-video {
+  margin: 0%;
+}
 .wp-block-video video {
   display: flex;
-  max-width: 680px;
+  max-width: 600px;
   padding: 0%;
   margin: 0px auto;
 }
@@ -508,9 +512,14 @@ footer li a:hover,
   .copy-right {
     padding-top: 10px;
   }
+  /* Details Page*/
+  .wp-block-video video {
+    max-width: 400px;
+  }
 }
 /* Mobile */
 @media (max-width: 600px) {
+  /* Home Page */
   .latest-posts-container {
     display: block;
   }
@@ -528,6 +537,20 @@ footer li a:hover,
   }
   .countries-container {
     display: none;
+  }
+  .sign-up {
+    margin-bottom: 20px;
+  }
+  /* Blogs Page */
+  .blog-container {
+    grid-template-columns: repeat(1, 90%);
+  }
+  /* Details Page */
+  .details-container {
+    max-width: 90%;
+  }
+  .wp-block-video video {
+    max-width: 310px;
   }
 }
 
