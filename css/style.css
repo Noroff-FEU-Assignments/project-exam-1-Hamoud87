@@ -47,7 +47,8 @@ nav ul a {
   color: #b5d3cd;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+.active {
   color: #fc7353;
 }
 h1,
@@ -493,6 +494,7 @@ footer li a:hover,
   .next {
     top: 90px;
   }
+
   .latest-posts-container {
     max-width: 95%;
   }
@@ -525,15 +527,30 @@ footer li a:hover,
   /* Home Page */
 
   .slider-images {
-    width: 100%;
-    padding: 0%;
+    width: 33%;
+    padding: 2px;
   }
   .animal-img {
-    padding: 0%;
+    padding-left: 0px;
+  }
+  .carousel-button {
+    position: absolute;
+    font-size: 20px;
+  }
+  .prev {
+    left: 5px;
+    top: 35px;
+    z-index: 1;
+  }
+  .next {
+    right: 5px;
+    top: 35px;
+    z-index: 1;
   }
   .latest-posts-container {
     display: block;
   }
+
   .quotes-wrapper,
   .single-post,
   footer ul {
