@@ -523,8 +523,10 @@ footer li a:hover,
 /* Mobile */
 @media (max-width: 600px) {
   /* Home Page */
+
   .slider-images {
     width: 100%;
+    padding: 0%;
   }
   .animal-img {
     padding: 0%;
