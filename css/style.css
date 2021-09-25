@@ -552,6 +552,9 @@ footer li a:hover,
   .wp-block-video video {
     max-width: 310px;
   }
+  .comment-form {
+    max-width: 300px;
+  }
 }
 
 /* .modal {
