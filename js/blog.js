@@ -38,8 +38,8 @@ button.onclick = function () {
 
       for (let i = 0; i < getBlogResults.length; i++) {
         blogContainer.innerHTML += ` <div class="blog-posts-wrapper" >
-                                    <a href="detail.html?id=${getBlogResults[i].id}">
-                                      <img src="${getBlogResults[i].featured_media_src_url}" alt="">
+                                    <a  href="detail.html?id=${getBlogResults[i].id}">
+                                      <img src="${getBlogResults[i].featured_media_src_url}" alt="${getBlogResults[i].yoast_head_json.og_image[0].alt}">
                                       <h2>${getBlogResults[i].title.rendered}</h2>
                                      </a>
                                      <p>Published ${getBlogResults[i].date}</P>

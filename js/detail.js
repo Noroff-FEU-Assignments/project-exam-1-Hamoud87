@@ -40,12 +40,16 @@ function createHtml(details) {
                                   </div>
                                   `;
 }
-
-/* postImage.addEventListner("click", testA);
-
-function testA() {
-  postImage.classList.add(".view");
-  postImage.classList.remove(".details-container");
-  console.log("hi");
-}*/
-/* <p>Author ${details.yoast_head_json.twitter_creator}</P> */
+const closeButton = document.querySelector(".close");
+const openButton = document.querySelector(".fa-hamburger");
+const nav = document.querySelector("nav");
+closeButton.onclick = function () {
+  event.stopPropagation();
+  nav.style.display = "none";
+  closeButton.style.display = "none";
+};
+openButton.onclick = function () {
+  event.stopPropagation();
+  nav.style.display = "block";
+  closeButton.style.display = "block";
+};
