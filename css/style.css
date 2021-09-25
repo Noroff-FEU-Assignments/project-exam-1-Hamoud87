@@ -79,7 +79,6 @@ h2,
   margin: 10px auto;
   display: flex;
   transform: translateX(0);
-
   transition: 1s;
 }
 .slider-images {
@@ -527,7 +526,9 @@ footer li a:hover,
   .slider-images {
     width: 100%;
   }
-
+  .animal-img {
+    padding: 0%;
+  }
   .latest-posts-container {
     display: block;
   }
