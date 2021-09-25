@@ -513,6 +513,10 @@ footer li a:hover,
     padding-top: 10px;
   }
   /* Details Page*/
+
+  .details-container p {
+    max-width: 400px;
+  }
   .wp-block-video video {
     max-width: 400px;
   }

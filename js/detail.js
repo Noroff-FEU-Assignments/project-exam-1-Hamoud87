@@ -14,7 +14,7 @@ async function fetchProduct() {
     console.log(details);
     createHtml(details);
     const viewImage = document.querySelector(".animal-img");
-    const closeImage = document.querySelector(".close-image");
+
     const detailsDiv = document.querySelector(".details-container");
     viewImage.onclick = function () {
       event.stopPropagation();
