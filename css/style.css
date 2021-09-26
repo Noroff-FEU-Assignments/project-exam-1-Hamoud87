@@ -71,7 +71,7 @@ p {
 }
 p {
   font-family: "futura Round", sans-serif, Arial;
-  font-size: 19px;
+  font-size: 18px;
 }
 nav ul a,
 h1,
@@ -336,8 +336,8 @@ footer li a:hover,
 }
 /* About Page */
 .about-container {
-  max-width: 760px;
-  margin: 10px auto 60px;
+  max-width: 650px;
+  margin: 10px auto 120px;
 }
 
 .blogger-bio {
@@ -373,7 +373,7 @@ footer li a:hover,
 .saboxplugin-authorname,
 .terms-policy {
   max-width: 700px;
-  line-height: 28px;
+  line-height: 25px;
   word-spacing: 0.03em;
   margin: 0px auto;
 }
@@ -425,7 +425,6 @@ footer li a:hover,
   right: 5px;
   bottom: 10px;
 }
-/* Terms-Privacy page */
 
 /* Contact Page */
 
@@ -621,5 +620,10 @@ footer li a:hover,
   }
   .comment-form {
     max-width: 300px;
+  }
+  /* About Page*/
+  .about-container {
+    max-width: 300px;
+    margin: 10px auto 20px;
   }
 }
