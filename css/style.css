@@ -386,10 +386,7 @@ footer li a:hover,
 .details-container p {
   margin: 15px auto;
 }
-.saboxplugin-gravatar,
-.vcard {
-  padding-left: 30px;
-}
+
 .view {
   max-width: 100%;
 }
