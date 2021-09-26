@@ -223,7 +223,6 @@ h1 {
 }
 /* Posts by Countries */
 .countries-container {
-  max-width: 1280px;
   display: flex;
   margin: 10px auto;
 }
@@ -369,14 +368,11 @@ footer li a:hover,
   transition: 0.6s;
 }
 
-.details-container img {
-  padding: 10px;
-}
 .details-container p,
 .saboxplugin-gravatar,
 .saboxplugin-authorname,
 .terms-policy {
-  max-width: 720px;
+  max-width: 700px;
   line-height: 2em;
   word-spacing: 0.03em;
   margin: 0px auto;
@@ -393,7 +389,7 @@ footer li a:hover,
 }
 .wp-block-video video {
   display: flex;
-  max-width: 600px;
+  max-width: 700px;
   padding: 0%;
   margin: 0px auto;
 }
