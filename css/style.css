@@ -393,6 +393,10 @@ footer li a:hover,
 .view {
   max-width: 100%;
 }
+.wp-block-video {
+  padding: 0%;
+  margin: 0%;
+}
 .wp-block-video video {
   display: flex;
   max-width: 500px;
@@ -550,6 +554,7 @@ footer li a:hover,
   .details-container p {
     max-width: 400px;
   }
+
   .wp-block-video video {
     max-width: 400px;
   }
@@ -619,10 +624,7 @@ footer li a:hover,
   .details-container {
     max-width: 90%;
   }
-  .wp-block-video {
-    padding: 0%;
-    margin: 0%;
-  }
+
   .wp-block-video video {
     max-width: 310px;
   }
