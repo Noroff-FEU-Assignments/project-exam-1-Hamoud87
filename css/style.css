@@ -373,14 +373,16 @@ footer li a:hover,
 .saboxplugin-authorname,
 .terms-policy {
   max-width: 700px;
-  line-height: 2em;
+  line-height: 28px;
   word-spacing: 0.03em;
   margin: 0px auto;
 }
 .details-container p a {
   color: #0000ff;
 }
-
+.details-container p {
+  margin: 15px auto;
+}
 .view {
   max-width: 100%;
 }
