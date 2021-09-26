@@ -621,10 +621,13 @@ footer li a:hover,
   .comment-form {
     max-width: 300px;
   }
-  /* About Page*/
+  /* About & Privacy Policy  Page*/ 
   .about-container,
   .terms-policy {
     max-width: 320px;
     margin: 10px auto 20px;
   }
 }
+
+
+
