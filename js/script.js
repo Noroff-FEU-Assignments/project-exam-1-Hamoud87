@@ -78,7 +78,7 @@ async function getLatestPost() {
       latestContainer.innerHTML += ` <div class="latest-post">
                                        <img src="${getLatestResults[i].featured_media_src_url}" alt="${getLatestResults[i].yoast_head_json.og_image[0].alt}">
                                        <h2>${getLatestResults[i].title.rendered}</h2>
-                                       <p>${getLatestResults[i].yoast_head_json.description}</p>
+                                       <p>${getLatestResults[i].excerpt.rendered}</p>
                                        <a href="detail.html?id=${getLatestResults[i].id}">Learn More</a>
                                       </div>`;
     }
