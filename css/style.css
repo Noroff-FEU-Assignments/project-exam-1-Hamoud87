@@ -621,9 +621,4 @@ footer li a:hover,
   .comment-form {
     max-width: 300px;
   }
-  /* About Page*/
-  .about-container {
-    max-width: 300px;
-    margin: 10px auto 20px;
-  }
 }
